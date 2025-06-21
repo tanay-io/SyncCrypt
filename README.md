@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 SyncCrypt
 
-## Getting Started
+**SyncCrypt** is a real-time collaborative code editor built with **Next.js 15**, **Monaco Editor**, and **Socket.IO**, enhanced with **AES-256 end-to-end encryption** using the Web Crypto API. It enables developers to collaborate on code with complete security — ensuring the code never leaves the browser in plaintext.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Whether you're pair programming, mentoring, or conducting remote interviews — **SyncCrypt** provides a blazing-fast, secure, and visually clean environment to share and collaborate on code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> No server ever sees your original code. Encryption is handled entirely client-side using `AES-GCM` via the Web Crypto API.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔧 Features
 
-To learn more about Next.js, take a look at the following resources:
+| Feature                        | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| 🔐 End-to-end AES-256         | Code is encrypted on the client before being sent to the server             |
+| ⚡ Real-time Collaboration     | Share a room ID and start editing simultaneously                           |
+| 🧠 Monaco Editor              | VS Code-like editing experience in the browser                             |
+| 🌐 WebSocket Communication    | Low-latency sync powered by Socket.IO                                      |
+| 🧍 Live Presence Tracking     | See who joins or leaves a room in real-time                                |
+| 🌙 Sleek UI                   | Built with Tailwind CSS for modern UX                                      |
+| 📱 Responsive Design          | Optimized for desktops and tablets                                         |
+| 🔄 Auto-Syncing               | Changes broadcast instantly to all connected clients                       |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Tech Stack
 
-## Deploy on Vercel
+- **Frontend**: Next.js 15 (App Router, RSC), React 18, Tailwind CSS
+- **Editor**: Monaco Editor (same as VS Code)
+- **Real-time Engine**: Socket.IO (Client + Server)
+- **Security**: Web Crypto API (AES-256 GCM)
+- **Other**: UUID for room/session management, Zustand for global state
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
